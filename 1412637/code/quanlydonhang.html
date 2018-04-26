@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>Quản Lý Đơn hàngL5 Admin Template</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -225,7 +225,8 @@
                             <strong class="card-title">Quản Lý Đơn Hàng</strong>
                         </div>
                         <div class="card-body">
-                  <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                        <div><button style="color: #1BBAE1; background-color: white; border: none; font-size:24px; margin-left: 40%;" type="button"><i class="fa fa-plus-circle"> Thêm đơn hàng mới</i></button></div>
+                  <table class="table table-striped table-bordered">
                     <thead>
                       <tr>
                         <th>Mã đơn hàng</th>
@@ -320,12 +321,14 @@
                                 <a class="nav-link" href="#">Đã giao</a>
                             </div>
                           </button>
-                          </div></td>
-                          <td>
-                                <button style="color: red; background-color: #F2F2F2; border: none; font-size:24px" type="button"><i class="fa fa-close"></i></button>
-                                <button style="color: grey; background-color: #F2F2F2; border: none; font-size:24px" type="button"><i class="fa fa-cog"></i></button>
-                          </td>
+                          </div>
+                      </td>
+                      <td>
+                            <button style="color: red; background-color: #F2F2F2; border: none; font-size:24px" type="button"><i class="fa fa-close"></i></button>
+                            <button style="color: grey; background-color: #F2F2F2; border: none; font-size:24px" type="button"><i class="fa fa-cog"></i></button>
+                       </td>
                       </tr>
+                      <tr></tr>
                        <tr>
                         <td>S0S01</td>
                         <td>27/03/2018</td>
@@ -481,7 +484,6 @@
                       </tr>
                     </tbody>
                   </table>
-                  <button style="color: #1BBAE1; background-color: white; border: none; font-size:24px; margin-left: 40%;" type="button"><i class="fa fa-plus-circle"> Thêm đơn hàng mới</i></button>
                         </div>
                     </div>
                 </div>
@@ -564,9 +566,11 @@ $('button i[class="fa fa-close"]').click(function(){
 });
 $('button i[class="fa fa-cog"]').click(function(){
     alert('Chỉnh sửa');
+    $(this.parentNode.parentNode.parentNode).html('<td colspan="6"><div class="container"><h2><br>Chỉnh sửa</h2><form class="form-horizontal" action="/quanlydonhang.html"><div class="form-group"><label for="txt">Mã đơn hàng:</label><input type="text" class="form-control" id="email" placeholder="S0000" name="maDH"></div>        <div class="form-group"><label class="control-label" for="txt">Ngày lập:</label><input type="text" class="form-control" id="email" placeholder="1/1/2018" name="Date"></div><div class="form-group"><label class="control-label" for="txt">Sản phẩm:</label><input type="text" class="form-control" id="email" placeholder="Túi xách nữ T001" name="Sp"></div><div class="form-group"><label class="control-label" for="txt">Tổng tiền:</label><input type="text" class="form-control" id="email" placeholder="100000" name="Money">VNĐ</div>        <div class="form-group"><div class="col-sm-offset-2"><button type="submit" class="btn btn-success">Submit</button></div></form></div></td>');
 });
 $('button i[class="fa fa-plus-circle"]').click(function() {
-    alert('Chỉnh sửa');
+    alert('Thêm');
+    $(this.parentNode.parentNode).html('<div class="container"><h2 style="color: #1BBAE1; background-color: white; border: none; font-size:24px; margin-left: 40%;"><br>Thêm đơn hàng</h2><form class="form-horizontal" action="/quanlydonhang.html"><div class="form-group"><label for="txt">Mã đơn hàng:</label><input type="text" class="form-control" id="email" placeholder="S0000" name="maDH"></div>        <div class="form-group"><label class="control-label" for="txt">Ngày lập:</label><input type="text" class="form-control" id="email" placeholder="1/1/2018" name="Date"></div><div class="form-group"><label class="control-label" for="txt">Sản phẩm:</label><input type="text" class="form-control" id="email" placeholder="Túi xách nữ T001" name="Sp"></div><div class="form-group"><label class="control-label" for="txt">Tổng tiền:</label><input type="text" class="form-control" id="email" placeholder="100000" name="Money">VNĐ</div>        <div class="form-group"><div class="col-sm-offset-2"><button type="submit" class="btn btn-success">Submit</button></div></form></div>');
 })
 </script>
 <script type="text/javascript"></script>
