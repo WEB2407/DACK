@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Store Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="colorlib-loader"></div>
+    <div id="page">
+        <nav class="colorlib-nav" role="navigation">
+            <div class="top-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div id="colorlib-logo"><a href="index.html">Store</a></div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="search">
+                                        <span class="input-group-addon"><a id="search-btn" href="search.html"><i class="icon-search"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="padding-top: 10px; padding-bottom: 10px;">
+                                    <ul>
+                                        <li><a href="cart.html"><i class="icon-shopping-cart"> </i> Giỏ hàng</a> </li>
+                                        <li class="has-dropdown">
+                                            <a href="profile.html"><i class="icon-user"></i>Thuy Trang</a>
+                                            <ul class="dropdown">
+                                                <li><a href="profile.html">Profile</a></li>
+                                                <li><a href="list-orders.html"> Đơn hàng </a></li>
+                                                <li><a href="index.html"> Đăng xuất </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        <aside>
+            <div class="row" id="menu">
+                <div class="col-md-2 col-md-offset-1">
+                    <a href="shop.html"><strong> SẢN PHẨM </strong></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="shop.html"><strong> THƯƠNG HIỆU </strong></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="shop.html"><strong> SẢN PHẨM MỚI NHẤT</strong> </a>
+                </div>
+                <div class="col-md-2">
+                    <a href="shop.html"><strong> SẢN PHẨM BÁN CHẠY </strong></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="shop.html"><strong> SẢN PHẨM XEM NHIỀU</strong></a>
+                </div>
+            </div>
+        </aside>
+        </br>
+        <div class="colorlib-shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="sidebar">
+                            <div class="side">
+                                <h2>Danh mục</h2>
+                                <!--  <ul>
+                                    <li><a href="#">Cập nhật thông tin </a> </li>
+                                    <li><a href="#">Quản lý đơn hàng </a></li>
+                                    <li><a href="#">Danh sách mua hàng </a></li>
+                                </ul> -->
+                                <ul class="nav nav-pills nav-stacked" id="menu-nav">
+                                    <li role="presentation" class="active"><a href="profile.html">Cập nhật thông tin</a></li>
+                                    <li role="presentation"><a href="list-orders.html">Quản lý đơn hàng</a></li>
+                                    <li role="presentation"><a href="history-orders.html">Lịch sử mua hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="account">
+                            <div class="sidebar">
+                                <h2>Thông tin tài khoản</h2>
+                                <div class="side">
+                                    <p> Họ tên: Thùy Trang
+                                        <button class="btn btn-warning" style="float: right; background-color: #ffc300;" data-toggle="modal" data-target="#account"> Update</button>
+                                    </p>
+                                    <p> SDT: 0968280548</p>
+                                    <p> Địa chỉ: 135b Trần Hưng Đạo Quận 1 TPHCM</p>
+                                    <p> Email: phanthuytrang@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="receiver">
+                            <div class="sidebar">
+                                <h2>Thông tin người nhận </h2>
+                                <div class="side">
+                                    <p> Họ tên: Quỳnh Như
+                                        <button class="btn btn-warning" style="float: right; background-color: #ffc300;" data-toggle="modal" data-target="#receiver"> Update</button>
+                                    </p>
+                                    <p> SDT: 0974449333 </p>
+                                    <p> Địa chỉ: Quận 5 TPHCM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="account" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> Thông tin tài khoản</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Họ tên</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="username" type="text" value="Thùy Trang">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">SDT</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="phone" type="text" value="0968280548">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Địa chỉ</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="address" type="text" value="135b Trần Hưng Đạo Quận 1 TPHCM">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Email</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="email" type="text" value="phanthuytrang@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="receiver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> Thông tin người nhận</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Họ tên</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="username" type="text" value="Quỳnh Như">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">SDT</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="phone" type="text" value="0974449333">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Địa chỉ</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="address" type="text" value="Quận 5 TPHCM">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="colorlib-subscribe">
+            <div class="overlay"></div>
+        </div>
+        <footer id="colorlib-footer" role="contentinfo">
+            <div class="container">
+                <div class="row row-pb-md">
+                    <div class="col-md-2 colorlib-widget">
+                        <h4>TRỢ GIÚP</h4>
+                        <p>
+                            <ul class="colorlib-footer-links">
+                                <li><a href="#">Hình thức thanh toán</a></li>
+                                <li><a href="#">Hình thức giao hàng</a></li>
+                                <li><a href="#">Chính sách đổi trả</a></li>
+                                <li><a href="#">Chính sách bảo hành</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-2 colorlib-widget">
+                        <h4>THÔNG TIN</h4>
+                        <p>
+                            <ul class="colorlib-footer-links">
+                                <li><a href="#">Tuyển dụng</a></li>
+                                <li><a href="#">Hệ thống cửa hàng</a></li>
+                                <li><a href="#">Liên hệ hợp tác</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-4 colorlib-widget">
+                        <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                        <p> Nếu bạn gặp bất cứ vấn đề gì cần giải đáp hãy liên hệ với giúp tôi. Rất vui khi được phục vụ các bạn</p>
+                        <p>
+                            <ul class="colorlib-social-icons">
+                                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>CHI NHÁNH CỬA HÀNG</h4>
+                        <ul class="colorlib-footer-links">
+                            <li>291 South 21th Street, Suite 721 New York NY 10016</li>
+                            <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                            <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+                            <li><a href="#">yoursite.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <span class="block"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | PHÁT TRIỂN ỨNG DỤNG WEB TH2015/1
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+    
+    <script>
+        // document.getElementById('search-btn').style.visibility='hidden';
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search-btn").click();
+            }
+        });
+</script>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!-- Owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <!-- Date Picker -->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+
+    </body>
+</html>
