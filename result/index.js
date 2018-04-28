@@ -29,10 +29,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 var server = http.createServer(app);
 server.listen(port, function() {
-    console.log("Server is running on port 3000.");
+    console.log("Server is running on port 8080.");
 });
 
 
