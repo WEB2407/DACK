@@ -15,15 +15,19 @@
 **Trang tìm kiếm ('/search')
 
 
-**Trang đăng kí ('/sign-up')
-
 
 **Trang đăng nhập 
 
 
+
+**Trang đăng kí ('/sign-up')
+
+
+
+
 ### Phân hệ người dùng đã đăng nhập
 
-**Trang chủ đăng nhập('/member')
+**Trang chủ đã đăng nhập('/member')
 
 
 **Trang thông tin cá nhân ('/profile')
