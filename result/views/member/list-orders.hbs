@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+    <div class="colorlib-loader"></div>
+    <div id="page">
+        {{> nav-member}}
+        {{> menu}}
+        </br>
+        <div class="colorlib-shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="sidebar">
+                            <div class="side">
+                                <h2>Danh mục</h2>
+                                <!--  <ul>
+                                    <li><a href="#">Cập nhật thông tin </a> </li>
+                                    <li><a href="#">Quản lý đơn hàng </a></li>
+                                    <li><a href="#">Danh sách mua hàng </a></li>
+                                </ul> -->
+                                <ul class="nav nav-pills nav-stacked" id="menu-nav">
+                                    <li role="presentation" ><a href="/profile">Cập nhật thông tin</a></li>
+                                    <li role="presentation" class="active"><a href="/list-orders">Quản lý đơn hàng</a></li>
+                                    <li role="presentation"><a href="/history-orders">Lịch sử mua hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="account">
+                            <!-- <div class="sidebar">
+                                <h2>Đơn hàng #00001</h2>
+                                <div class="side">
+                                    <p> Họ tên: Thùy Trang
+                                        <button class="btn btn-warning" style="float: right; background-color: #ffc300;" data-toggle="modal" data-target="#account"> Update</button>
+                                    </p>
+                                    <p> SDT: 0968280548</p>
+                                    <p> Địa chỉ: 135b Trần Hưng Đạo Quận 1 TPHCM</p>
+                                    <p> Email: phanthuytrang@gmail.com</p>
+                                </div>
+                            </div> -->
+                            <h3> Đơn hàng #0003 - Tổng tiền: 9 660 000</h3>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Hình ảnh </th>
+                                    <th>Thương hiệu</th>
+                                    <th>Số lượng</th>
+                                    <th>Giá </th>
+                                </tr>
+                                <tr>
+                                    <td>Túi Đeo Chéo Size Lớn Da Mềm Thời Trang</td>
+                                    <td><img src="images/neo-bag-1-1.jpg" width="70px"></td>
+                                    <td>Neo Bag</td>
+                                    <td> 1</td>
+                                    <td>680 000</td>
+                                </tr>
+                                <tr>
+                                    <td>Túi đeo chéo vai nữ Wave</td>
+                                    <td><img src="images/artemys-tx-1-1.jpg" width="70px"></td>
+                                    <td>Artemys</td>
+                                    <td> 1</td>
+                                    <td>3 490 000</td>
+                                </tr>
+                                <tr>
+                                    <td>Balo Nữ Orion M Đính Tua Rua</td>
+                                    <td><img src="images/naza-4-1.jpg" width="70px"></td>
+                                    <td>Artemys</td>
+                                    <td> 1</td>
+                                    <td>5 490 000</td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-warning" style="float:right;background-color: #ffc300">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="colorlib-subscribe">
+        <div class="overlay"></div>
+    </div>
+    {{> footer}}
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+    
+    <script>
+        // document.getElementById('search-btn').style.visibility='hidden';
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search-btn").click();
+            }
+        });
+</script>
+    <!-- jQuery -->
+    {{> footerjs}}
+    </body>
+</html>

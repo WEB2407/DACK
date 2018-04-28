@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+    <div class="colorlib-loader"></div>
+    <div id="page">
+        {{> nav-member}}
+        {{> menu}}
+        </br>
+        <div class="colorlib-shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="sidebar">
+                            <div class="side">
+                                <h2>Danh mục</h2>
+                                <!--  <ul>
+                                    <li><a href="#">Cập nhật thông tin </a> </li>
+                                    <li><a href="#">Quản lý đơn hàng </a></li>
+                                    <li><a href="#">Danh sách mua hàng </a></li>
+                                </ul> -->
+                                <ul class="nav nav-pills nav-stacked" id="menu-nav">
+                                    <li role="presentation" ><a href="/profile">Cập nhật thông tin</a></li>
+                                    <li role="presentation"><a href="/list-orders">Quản lý đơn hàng</a></li>
+                                    <li role="presentation" class="active"><a href="/history-orders">Lịch sử mua hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <table class="table table-striped">
+                            <tr>
+                                <td colspan="2">Đơn hàng: #0002 | Đặt ngày: 22/1/2018 <span style="color: red"> Hoàn tất </span> Thanh toán: Tiền mặt khi nhận hàng | Thành tiền: <span style="color: red"> 4 170 000</span> <a href="#" style="float: right; font-weight: bold;">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="col-md-3">
+                                        <img src="images/neo-bag-1-1.jpg" width="70px">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h4>Neo Bag</h4>
+                                        <p>Túi Đeo Chéo Size Lớn Da Mềm Thời Trang</p>
+                                        <p> 1x680 000 </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-md-3">
+                                        <img src="images/naza-5-1.jpg" width="70px">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h4>Artemys</h4>
+                                        <p>Túi đeo chéo vai nữ Wave</p>
+                                        <p> 1x3 490 000 </p>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        <table class="table table-striped">
+                            <tr>
+                                <td colspan="2">Đơn hàng: #0001 | Đặt ngày: 3/1/2018 <span style="color: red"> Hoàn tất </span> Thanh toán: Tiền mặt khi nhận hàng | Thành tiền: <span style="color: red"> 680 000</span> <a href="#" style="float: right; font-weight: bold;">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="col-md-2">
+                                        <img src="images/nine-west-1-1.jpg" width="70px">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h4>Neo Bag</h4>
+                                        <p>Túi Đeo Chéo Size Lớn Da Mềm Thời Trang</p>
+                                        <p> 1x680 000 </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="colorlib-subscribe">
+        <div class="overlay"></div>
+    </div>
+    {{> footer}}
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+    
+    <script>
+        // document.getElementById('search-btn').style.visibility='hidden';
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search-btn").click();
+            }
+        });
+</script>
+    <!-- jQuery -->
+    {{> footerjs}}
+
+    </body>
+</html>
