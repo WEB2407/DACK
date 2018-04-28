@@ -5,6 +5,7 @@
 
 **Trang chủ ('/')
 
+![](https://github.com/WEB2407/DAGK-Balo-TuiXach/blob/master/images/1.png)
 
 **Trang sản phẩm ('/shop')
 
