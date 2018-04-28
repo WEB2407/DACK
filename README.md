@@ -101,22 +101,36 @@ Cập nhập đơn hàng
 
 ![](https://github.com/WEB2407/DAGK-Balo-TuiXach/blob/master/images/25.png)
 
-## Installing
+### Hướng dẫn cài đặt
 
-**Step 1: Download source code**
+**Bước 1: Download source code (git)
 
- - Case 1: Drectly download from https://github.com/WEB2407/DAGK-Balo-TuiXach
+ - Cách 1: Download trực tiếp từ https://github.com/WEB2407/DAGK-Balo-TuiXach
  
- - Case 2: Open git: git clone https://github.com/WEB2407/DAGK-Balo-TuiXach.git
+ - Cách 2: Sử dụng command line : git clone https://github.com/WEB2407/DAGK-Balo-TuiXach.git
  
-**Step 2: Open folder "result" and run node
+**Bước 2: Mở folder vừa mới download về, tìm folder result chạy command line
    
     npm install 
  
-**Step 3: Run**
+**Step 3: Chạy fie index
 
     node index.js
   
   Server is running at port 8080
   
+ ### Cấu trúc Project 
  
+ ![](https://github.com/WEB2407/DAGK-Balo-TuiXach/blob/master/images/27.png)
+
+![](https://github.com/WEB2407/DAGK-Balo-TuiXach/blob/master/images/28.png)
+
+### Người thực hiện
+
+1412562 - Phan Thị Thùy Trang
+
+1412564 - Trần Thùy Bích Trâm
+
+1412570 - Phan Thị Phương Trinh
+
+1412637 - Lý Tử Văn
