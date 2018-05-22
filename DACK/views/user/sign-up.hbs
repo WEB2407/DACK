@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   {{> head}}
+</head>
+
+<body>
+    <div class="colorlib-loader"></div>
+    <div id="page">
+        {{> nav}}
+        {{> menu}}
+        </br>
+        <div class="colorlib-shop">
+            <div class="container">
+                <div class="row">
+                    <div class="account-sup" style="padding-right: 250px; padding-left: 250px;padding-top: 50px;">
+                        <center>
+                            <h3> ĐĂNG KÝ TÀI KHOẢN</h3></center>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Họ tên</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="username" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">SDT</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="phone" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Địa chỉ</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="phone" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Email</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="email" type="email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Password</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="password" type="password">
+                                </br>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2"></label>
+                            <div class="col-md-9">
+                                <div class="g-recaptcha" data-sitekey="6LcKp1UUAAAAABzDr0K8L8bFfrAIxF6DJNNTAObn"></div>
+                               <button class="btn btn-warning" style="float: right; background-color: #ffc300;" onclick="SignUp()"> Sign up</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="colorlib-subscribe">
+            <div class="overlay"></div>
+        </div>
+        {{> footer}}
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+    
+    <script>
+        // document.getElementById('search-btn').style.visibility='hidden';
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search-btn").click();
+            }
+        });
+        function SignUp()
+        {
+            window.location.href="/profile";
+        }
+</script>
+{{> footerjs}}
+
+    </body>
+</html>

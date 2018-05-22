@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+    <div class="colorlib-loader"></div>
+    <div id="page">
+       {{> nav-member}}
+        {{>menu}}
+        </br>
+        <div class="colorlib-shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                       {{>cate-mem}}
+                    </div>
+                    <div class="col-md-9">
+                        <div class="account">
+                            <div class="sidebar">
+                                <h2>Thông tin tài khoản</h2>
+                                <div class="side">
+                                    <p> Họ tên: Thùy Trang
+                                        <button class="btn btn-warning" style="float: right; background-color: #ffc300;" data-toggle="modal" data-target="#account"> Update</button>
+                                    </p>
+                                    <p> SDT: 0968280548</p>
+                                    <p> Địa chỉ: 135b Trần Hưng Đạo Quận 1 TPHCM</p>
+                                    <p> Email: phanthuytrang@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="receiver">
+                            <div class="sidebar">
+                                <h2>Thông tin người nhận </h2>
+                                <div class="side">
+                                    <p> Họ tên: Quỳnh Như
+                                        <button class="btn btn-warning" style="float: right; background-color: #ffc300;" data-toggle="modal" data-target="#receiver"> Update</button>
+                                    </p>
+                                    <p> SDT: 0974449333 </p>
+                                    <p> Địa chỉ: Quận 5 TPHCM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="account" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> Thông tin tài khoản</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Họ tên</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="username" type="text" value="Thùy Trang">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">SDT</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="phone" type="text" value="0968280548">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Địa chỉ</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="address" type="text" value="135b Trần Hưng Đạo Quận 1 TPHCM">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Email</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="email" type="text" value="phanthuytrang@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="receiver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> Thông tin người nhận</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Họ tên</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="username" type="text" value="Quỳnh Như">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">SDT</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="phone" type="text" value="0974449333">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Địa chỉ</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="address" type="text" value="Quận 5 TPHCM">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="colorlib-subscribe">
+            <div class="overlay"></div>
+        </div>
+       {{> footer}}
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+    </div>
+    
+    <script>
+        // document.getElementById('search-btn').style.visibility='hidden';
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search-btn").click();
+            }
+        });
+</script>
+    <!-- jQuery -->
+   
+   {{> footerjs}}
+
+    </body>
+</html>
