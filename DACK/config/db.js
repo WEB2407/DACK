@@ -2,7 +2,7 @@ var Q = require('q');
 var mysql = require('mysql');
 
 var HOST = '127.0.0.1',
-    DB = 'quan_li_ban_hang',
+    DB = 'QLBH',
     USER = 'root',
     PWD = '';
 

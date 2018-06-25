@@ -1,13 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
+<!-- <html class="no-js" lang="">
+ -->
 <!--<![endif]-->
+<!DOCTYPE html>
+<html>
 
 <head>
-   {{>head-admin}}
+    {{>head-admin}}
 </head>
 
 <body>
@@ -26,86 +29,40 @@
                                 <button class="btn btn-primary" style="float: right; " data-toggle="modal" data-target="#add">New</button>
                             </div>
                             <div class="card-body">
-                                <table class="table table-striped table-bordered">
+                                <table class="table table-striped table-bordered" id="data-tbl">
                                     <thead>
                                         <tr>
                                             <th>Mã loại</th>
                                             <th>Tên loại</th>
-                                            <th>Mục lớn</th>
+                                            {{!--
+                                            <th>Mục lớn</th> --}}
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {{#each category}}
                                         <tr>
-                                            <td>TX</td>
-                                            <td>Túi xách</td>
-                                            <td>Không có</td>
+                                            <td>{{MaLoai}}</td>
+                                            <td>{{TenLoai}}</td>
+                                            {{!--
+                                            <td>Không có</td> --}}
                                             <td>
                                                 <center>
                                                     <div class="btn-group btn-group-xs">
                                                         <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
                                                             <i class="fa fa-pencil" ></i>
                                                         </a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                        <!-- <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a> -->
+                                                        <a href="/category/delete?id={{MaLoai}}" class="btn btn-primary icon-btn" id="del-btn">
+                      <i class="fa fa-lg fa-trash"></i>
+                    </a>
                                                     </div>
                                                 </center>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>BL</td>
-                                            <td>Balo</td>
-                                            <td>Không có</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>TXN</td>
-                                            <td>Túi xách nữ</td>
-                                            <td>Túi xách</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>BLP</td>
-                                            <td>Balo du lịch, phượt</td>
-                                            <td>Balo</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
+                                        {{/each}}
                                     </tbody>
                                 </table>
-                                <ul class="pagination">
-                                    <li class="disabled"><a href="/category" class="btn btn-xs btn-primary">&laquo;</a></li>
-                                    <li class="active"><a href="/category" class="btn btn-xs btn-primary">1</a></li>
-                                    <li><a href="/category" class="btn btn-xs btn-primary">2</a></li>
-                                    <li><a href="/category" class="btn btn-xs btn-primary">3</a></li>
-                                    <li><a href="/category" class="btn btn-xs btn-primary">4</a></li>
-                                    <li><a href="/category" class="btn btn-xs btn-primary">&raquo;</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -132,7 +89,7 @@
                     <div class="form-group row">
                         <label class="control-label col-md-2">Tên loại</label>
                         <div class="col-md-9">
-                            <input class="form-control" id="name-category" placeholder="Nhập mã khách hàng" type="text">
+                            <input class="form-control" id="namecategory" placeholder="Nhập mã khách hàng" type="text">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -147,9 +104,8 @@
                             </select>
                         </div>
                     </div>
-                    
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="sign-in-btn"> Add </button>
+                        <button type="button" class="btn btn-primary" id="add-btn"> Add </button>
                     </div>
                 </div>
             </div>
@@ -163,7 +119,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
                 </div>
-               <div class="modal-body">
+                <div class="modal-body">
                     <div class="form-group row">
                         <label class="control-label col-md-2">Mã loại</label>
                         <div class="col-md-9">
@@ -188,7 +144,6 @@
                             </select>
                         </div>
                     </div>
-                    
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" id="sign-in-btn"> Update </button>
                     </div>
@@ -197,6 +152,51 @@
         </div>
     </div>
     {{> js}}
+    <script type="text/javascript">
+    $('#add-btn').on('click', function() {
+
+        var data = {
+            code: $('#code').val(),
+            namecategory: $('#namecategory').val()
+        };
+        console.log(data);
+
+        $.ajax({
+            url: '/category',
+            method: 'POST',
+            // type: 'POST',
+            // contentType:'application/json',
+            data: data,
+            success: function(response) {
+                console.log('success');
+                //alert('hhihii');
+                console.log(data);
+                TT(data);
+            },
+            error: function(err) {
+                alert(err);
+            }
+        });
+    });
+
+    function TT(item) {
+        var tr = document.createElement('tr');
+
+        $("<td>" + item.code + "</td>").appendTo(tr);
+        $("<td>" + item.namecategory + "</td>").appendTo(tr);
+        $('<td> <center>' +
+            '<div class="btn-group btn-group-xs">' +
+            '<a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">' +
+            '<i class="fa fa-pencil" ></i>' +
+            '</a>' +
+            ' <a href="/category/delete?id=' + item.code + '" class="btn btn-primary icon-btn" id ="del-btn">' +
+            '<i class="fa fa-lg fa-trash"></i>' +
+            '</a> </div> </center></td>').appendTo(tr);
+        console.log(tr);
+        $("#data-tbl tbody").append(tr);
+        console.log($('#data-tbl tbody'));
+    };
+    </script>
 </body>
 
 </html>

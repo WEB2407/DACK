@@ -13,6 +13,7 @@ var favicon = require('serve-favicon');
 var mustache = require('mustache');
 var moment = require('moment');
 var wnumb = require('wnumb');
+var dateformat = require('dateformat');
 
 var app = express();
 
@@ -26,6 +27,11 @@ app.engine('hbs', handlebars({
         section: exphbs_sections(),
         now: function() {
             return moment().format('D/M/YYYY - HH:mm');
+        },
+        formatTime: function(date) {
+            var d = new Date(date);
+          //return dateformat(d,"shortDate");
+            return dateformat(d, "dd/mm/yyyy");
         },
         formatNumber: function(n) {
             var nf = wnumb({
@@ -47,6 +53,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 var admin = require('./routes/adminRoute');
+var category = require('./routes/categoryRoute');
 
 var port = process.env.PORT || 8080;
 var server = http.createServer(app);
@@ -61,4 +68,8 @@ server.listen(port, function() {
 
 //******************Trang admin san pham*******************//
 app.use('/admin', admin);
+app.use('/category', category);
+// app.get('/category', function(req, res){
+//     res.render('admin/category');
+// });
 
