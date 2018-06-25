@@ -52,8 +52,31 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use(session({
+    secret: 'Z7X7gXzoKBT8h18jwXBEP4T0kJ8=',
+    resave: false,
+    saveUninitialized: true,
+    // store: new fileStore()
+    store: new MySQLStore({
+        host: '127.0.0.1',
+        port: 3306,
+        user: 'root',
+        password: '',
+        database: 'QLBH',
+        createDatabaseTable: true,
+        schema: {
+            tableName: 'sessions',
+            columnNames: {
+                session_id: 'session_id',
+                expires: 'expires',
+                data: 'data'
+            }
+        }
+    }),
+}));
 var admin = require('./routes/adminRoute');
 var category = require('./routes/categoryRoute');
+var account = require('./routes/accountRoute');
 
 var port = process.env.PORT || 8080;
 var server = http.createServer(app);
@@ -69,6 +92,7 @@ server.listen(port, function() {
 //******************Trang admin san pham*******************//
 app.use('/admin', admin);
 app.use('/category', category);
+app.use('/account', account);
 // app.get('/category', function(req, res){
 //     res.render('admin/category');
 // });

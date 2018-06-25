@@ -778,7 +778,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="sign-in-btn" onclick="SignIn()"> Sign in </button>
+                        <button type="button" class="btn btn-primary" id="sign-in-btn"> Sign in </button>
                     </div>
                 </div>
             </div>
@@ -814,6 +814,48 @@
         function SignIn(){
             window.location.href="/member";
         }
+        <script>
+        // document.getElementById('search-btn').style.visibility='hidden';
+
+        // var input = document.getElementById("search");
+        // input.addEventListener("keyup", function(event) {
+        //     event.preventDefault();
+        //     if (event.keyCode === 13) {
+        //         document.getElementById("search-btn").click();
+        //     }
+        // });
+        // function SignUp()
+        // {
+        //     window.location.href="/admin";
+        // }
+        $('#sign-in-btn').on('click', function() {
+
+        var data = {
+        email: $('#email').val(),
+        password: $('#password').val()
+      
+            
+        };
+        console.log(data);
+
+        $.ajax({
+            url: '/account/login',
+            method: 'POST',
+            // type: 'POST',
+            // contentType:'application/json',
+            data: data,
+            success: function(response) {
+                console.log('success');
+                alert('hhihii');
+                console.log(data);
+                
+            },
+            error: function(err) {
+                alert(err);
+            }
+        });
+    });
+</script>
 </script>
     <!-- jQuery -->
     {{> footerjs}}
