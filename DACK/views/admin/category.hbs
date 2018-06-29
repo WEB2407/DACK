@@ -53,8 +53,8 @@
                                                             <i class="fa fa-pencil" ></i>
                                                         </a>
                                                         <!-- <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a> -->
-                                                        <a href="/category/delete?id={{MaLoai}}" class="btn btn-primary icon-btn" id="del-btn">
-                      <i class="fa fa-lg fa-trash"></i>
+                                                        <a href="/category/delete?id={{MaLoai}}" class="btn btn-xs btn-danger" id="del-btn">
+                      <i class="fa fa-times"></i>
                     </a>
                                                     </div>
                                                 </center>
@@ -189,8 +189,8 @@
             '<a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">' +
             '<i class="fa fa-pencil" ></i>' +
             '</a>' +
-            ' <a href="/category/delete?id=' + item.code + '" class="btn btn-primary icon-btn" id ="del-btn">' +
-            '<i class="fa fa-lg fa-trash"></i>' +
+            ' <a href="/category/delete?id=' + item.code + '" class="btn btn-xs btn-danger" id ="del-btn">' +
+            '<i class="fa fa-times"></i>' +
             '</a> </div> </center></td>').appendTo(tr);
         console.log(tr);
         $("#data-tbl tbody").append(tr);

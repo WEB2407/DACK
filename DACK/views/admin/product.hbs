@@ -41,23 +41,24 @@
                                             <th>Giá bán</th>
                                             <!-- <th>Mô tả</th> -->
                                             <th>Loại</th>
-                                            <th>Xuất xứ</th>
+                                            {{!-- <th>Xuất xứ</th> --}}
                                             <th>Nhà sản xuất</th>
                                             <th></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                          s          <tbody>
+                                        {{#each product}}
                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
+                                            <td>{{MaSP}}</td>
+                                            <td>{{TenSP}}</td>
+                                            <td><img src="images/{{FileName}}" width="70px"></td>
+                                            <td>{{formatNumber Gia}}</td>
                                             
-                                            <td>Túi xách</td>
+                                            <td>{{TenLoai}}</td>
                                             <td>
-                                                Hong Kong
+                                                {{TenNSX}}
                                             </td>
-                                            <td>Naza</td>
+                                            {{!-- <td>Naza</td> --}}
                                             <td>
                                                 <center>
                                                     <div class="btn-group btn-group-xs">
@@ -71,223 +72,7 @@
                                                 </center>
                                             </td>
                                         </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>Nz001</td>
-                                            <td>Túi xách phong cách châu âu</td>
-                                            <td><img src="images/naza-5-1.jpg" width="70px"></td>
-                                            <td>600 000 VNĐ</td>
-                                            
-                                            <td>Túi xách</td>
-                                            <td>
-                                                Hong Kong
-                                            </td>
-                                            <td>Naza</td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">
-                                                            <i class="fa fa-pencil" ></i>
-                                                        </a>
-                                                        <a href="javascript:void(0) " data-toggle="tooltip" title=" " class="btn btn-xs btn-danger" data-original-title="Delete">
-                                                            <i class="fa fa-times "></i>
-                                                        </a>
-                                                    </div>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                        
+                                         {{/each}}
                                     </tbody>
                                 </table>
                                 <ul class="pagination" >
@@ -350,14 +135,20 @@
                         <div class="form-group row">
                             <label class="control-label col-md-2">Loại</label>
                             <div class="col-md-9">
+                                
                                 <select name="select" id="select" class="form-control">
-                                <option value="0">Túi xách</option>
-                                <option value="1">Balo</option>
+                                {{!-- {{>category-admin}} --}}
+                                {{#each hangbag}}
+                                <option value= {{MaLoai}}>{{TenLoai}}</option>
                                
+                               
+                             {{/each}}
                               </select>
+
                             </div>
                         </div>
-                        <div class="form-group row">
+                        {{!-- {{>category-admin}} --}}
+{{!--                         <div class="form-group row">
                             <label class="control-label col-md-2">Xuất xứ</label>
                             <div class="col-md-9">
                                 <select name="select" id="select" class="form-control">
@@ -367,15 +158,20 @@
                                 <option value="3">Việt Nam</option>
                               </select>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group row">
                             <label class="control-label col-md-2">Nhà sản xuất</label>
                             <div class="col-md-9">
                                 <select name="select" id="select" class="form-control">
-                                <option value="0">Naza</option>
+                                                                    {{#each layoutModels.producer}}
+                                <option value= {{MaNSX}}>{{TenNSX}}</option>
+                               
+                               
+                             {{/each}}
+                                {{!-- <option value="0">Naza</option>
                                 <option value="1">Neo Bag</option>
                                 <option value="2">Artemys</option>
-                                <option value="3">Nine west</option>
+                                <option value="3">Nine west</option> --}}
                               </select>
                             </div>
                         </div>
@@ -484,6 +280,51 @@ Sản phẩm được cung cấp bởi Naza và giao hàng bởi ZALORA​
     <!-- /#right-panel -->
     <!-- Right Panel -->
     {{> js}}
+    // <script type="text/javascript">
+    // $('#add-btn').on('click', function() {
+
+    //     var data = {
+    //         code: $('#code').val(),
+    //         namecategory: $('#namecategory').val()
+    //     };
+    //     console.log(data);
+
+    //     $.ajax({
+    //         url: '/category',
+    //         method: 'POST',
+    //         // type: 'POST',
+    //         // contentType:'application/json',
+    //         data: data,
+    //         success: function(response) {
+    //             console.log('success');
+    //             //alert('hhihii');
+    //             console.log(data);
+    //             TT(data);
+    //         },
+    //         error: function(err) {
+    //             alert(err);
+    //         }
+    //     });
+    // });
+
+    // function TT(item) {
+    //     var tr = document.createElement('tr');
+
+    //     $("<td>" + item.code + "</td>").appendTo(tr);
+    //     $("<td>" + item.namecategory + "</td>").appendTo(tr);
+    //     $('<td> <center>' +
+    //         '<div class="btn-group btn-group-xs">' +
+    //         '<a href="#" data-toggle="modal" data-target="#edit" class="btn btn-xs btn-default">' +
+    //         '<i class="fa fa-pencil" ></i>' +
+    //         '</a>' +
+    //         ' <a href="/category/delete?id=' + item.code + '" class="btn btn-xs btn-danger" id ="del-btn">' +
+    //         '<i class="fa fa-times"></i>' +
+    //         '</a> </div> </center></td>').appendTo(tr);
+    //     console.log(tr);
+    //     $("#data-tbl tbody").append(tr);
+    //     console.log($('#data-tbl tbody'));
+    // };
+    // </script>
 </body>
 
 </html>

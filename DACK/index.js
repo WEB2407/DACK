@@ -35,9 +35,9 @@ app.engine('hbs', handlebars({
         },
         formatNumber: function(n) {
             var nf = wnumb({
-                thousand: ','
+                thousand: ' '
             });
-            return nf.to(n);
+            return nf.to(n) + ' VND';
         },
     }
 }));
@@ -77,6 +77,12 @@ app.use(session({
 var admin = require('./routes/adminRoute');
 var category = require('./routes/categoryRoute');
 var account = require('./routes/accountRoute');
+var product = require('./routes/productRoute');
+var layoutRoute = require('./routes/_layoutRoute');
+var layoutpr = require('./routes/_layoutpr');
+
+var producer = require('./routes/producerRoute');
+
 
 var port = process.env.PORT || 8080;
 var server = http.createServer(app);
@@ -90,10 +96,15 @@ server.listen(port, function() {
 //******************Trang thành viên *******************//
 
 //******************Trang admin san pham*******************//
+app.use(layoutRoute);
+app.use(layoutpr);
+
 app.use('/admin', admin);
 app.use('/category', category);
 app.use('/account', account);
-// app.get('/category', function(req, res){
-//     res.render('admin/category');
-// });
+app.use('/shop', product);
+app.use('/brand', producer);
+app.get('/', function(req, res){
+    res.render('admin/product');
+});
 

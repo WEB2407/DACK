@@ -1,21 +1,22 @@
-<!DOCTYPE HTML>
-<html>
-
 <head>
-    {{>head}}
+    <base href="/"> {{>head}}
 </head>
 
 <body>
     <div class="colorlib-loader"></div>
     <div id="page">
-        {{>nav}}
-        {{>menu}}
+        {{>nav}} {{>menu}}
         <br></br>
         <div class="colorlib-shop">
             <div class="container">
+                <form id="frmAddToCart" method="post" action="/cart/add1">
+                    <input type="hidden" id="txtP" name="proId" />
+                    <input type="hidden" id="txtC" name="catId" value="{{catId}}" />
+                </form>
                 <div class="row">
                     <div class="col-md-9 col-md-push-3">
                         <div class="row row-pb-lg">
+                            {{#each product}}
                             <div class="col-md-4 text-center">
                                 <div class="product-entry">
                                     <div class="product-img" style="background-image: url(images/aldo-1-1.jpg);">
@@ -29,212 +30,15 @@
                                         </div>
                                     </div>
                                     <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$199.00</span> <span class="sale">$300.00</span> </p>
+                                        <h3>{{TenSP}}</h3>
+                                        <p class="price"><span>{{formatNumber Gia}}</span> {{!-- <span class="sale">$300.00</span> --}} </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/naza-1-1.jpg);">
-                                        <p class="tag"><span class="sale">Hot</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/naza-5-1.jpg);">
-                                        <p class="tag"><span class="new">New</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/aldo-2-1.jpg);">
-                                        <p class="tag"><span class="sale">Hot</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/naza-4-1.jpg);">
-                                        <p class="tag"><span class="sale">Hot</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/mr-ace-homme-3-1.jpg);">
-                                        <p class="tag"><span class="new">New</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/mr-ace-homme-1-1.jpg);">
-                                        <p class="tag"><span class="new">New</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/neo-bag-2-1.jpg);">
-                                        <p class="tag"><span class="sale">Hot</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/nine-west-1-1.jpg);">
-                                        <p class="tag"><span class="sale">Hot</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/naza-3-1.jpg);">
-                                        <p class="tag"><span class="sale">Hot</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/neo-bag-3-1.jpg);">
-                                        <p class="tag"><span class="new">New</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="product-entry">
-                                    <div class="product-img" style="background-image: url(images/mr-ace-homme-4-1.jpg);">
-                                        <p class="tag"><span class="new">New</span></p>
-                                        <div class="cart">
-                                            <p>
-                                                <span class="addtocart"><a href="/cart"><i class="icon-shopping-cart"></i></a></span>
-                                                <span><a href="/product-detail"><i class="icon-eye"></i></a></span>
-                                                <span><a href="#"><i class="icon-heart3"></i></a></span>
-                                                
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3><a href="/shop">Floral Dress</a></h3>
-                                        <p class="price"><span>$300.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
+                            {{/each}}
                         </div>
                         <div class="row">
+                            {{!--
                             <div class="col-md-12">
                                 <ul class="pagination">
                                     <li class="disabled"><a href="/shop">&laquo;</a></li>
@@ -244,7 +48,32 @@
                                     <li><a href="/shop">4</a></li>
                                     <li><a href="/shop">&raquo;</a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    {{#if showPrevPage}}
+                                    <li>
+                                        <a href="?page={{prevPage}}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                                    </li>
+                                    {{/if}} {{#each pages }} {{#if isActive }}
+                                    <li class="active">
+                                        <a href="?page={{pageValue}}">{{pageValue}}</a>
+                                    </li>
+                                    {{else}}
+                                    <li>
+                                        <a href="?page={{pageValue}}">{{pageValue}}</a>
+                                    </li>
+                                    {{/if}} {{/each}} {{#if showNextPage }}
+                                    <li>
+                                        <a href="?page={{nextPage}}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                                    </li>
+                                    {{/if}}
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <div class="col-md-3 col-md-pull-9">
@@ -256,36 +85,21 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading" role="tab" id="headingOne">
                                                 <h4 class="panel-title">
-                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Balo
-                                             </a>
-                                         </h4>
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">SẢN PHẨM</a>
+                                            </h4>
                                             </div>
-                                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="panel-body">
-                                                    <ul>
-                                                        <li><a href="/shop">Balo Nam</a></li>
-                                                        <li><a href="/shop">Balo Nữ</a></li>
-                                                        <li><a href="/shop">Balo du lịch, phượt</a></li>
-                                                        <li><a href="/shop">Balo đựng laptop</a></li>
-                                                    </ul>
-                                                </div>
+                                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> {{>category}}
                                             </div>
                                         </div>
-                                        <div class="panel panel-default">
+                                         <div class="panel panel-default">
                                             <div class="panel-heading" role="tab" id="headingTwo">
                                                 <h4 class="panel-title">
-                                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Túi sách
-                                             </a>
+                                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">THƯƠNG HIỆU</a>
                                          </h4>
                                             </div>
                                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body">
-                                                    <ul>
-                                                        <li><a href="/shop">Túi sách tay Nữ</a></li>
-                                                        <li><a href="/shop">Túi đeo chéo nữ</a></li>
-                                                        <li><a href="/shop">Ví, bóp Nữ</a></li>
-                                                    </ul>
-                                                </div>
+                                                {{>producer}}
                                             </div>
                                         </div>
                                     </div>
@@ -343,35 +157,31 @@
     </div>
     {{>footer}}
     </div>
-
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
     </div>
-    
     <script>
-        // document.getElementById('search-btn').style.visibility='hidden';
+    // document.getElementById('search-btn').style.visibility='hidden';
 
-        var input = document.getElementById("search");
-        input.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("search-btn").click();
-            }
-        });
-
-        var input = document.getElementById("password");
-        input.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("sign-in-btn").click();
-            }
-        });
-        function SignIn(){
-            window.location.href="/member";
+    var input = document.getElementById("search");
+    input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            document.getElementById("search-btn").click();
         }
-</script>
-    
-    {{> footerjs}}
+    });
 
-    </body>
-</html>
+    var input = document.getElementById("password");
+    input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            document.getElementById("sign-in-btn").click();
+        }
+    });
+
+    function SignIn() {
+        window.location.href = "/member";
+    }
+    </script>
+    {{> footerjs}}
+</body>

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <base href="/">
    {{> head}}
 </head>
 
@@ -16,10 +17,11 @@
                 <div class="row row-pb-lg">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="product-detail-wrap">
+                            {{#with product}}
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="product-entry">
-                                        <div class="product-img" style="background-image: url(images/naza-5-1.jpg);">
+                                        <div class="product-img" style="background-image: url(images/{{FileName}});">
                                             <p class="tag"><span class="sale">Sale</span></p>
                                         </div>
                                         <div class="thumb-nail">
@@ -30,22 +32,18 @@
                                     </div>
                                 </div>
                                 <div class="col-md-7">
+                                    
                                     <div class="desc">
-                                        <h3>Túi Xách Nữ Phong Cách Châu ÂU</h3>
+                                        <h3>{{TenSP}}</h3>
                                         <p class="price">
-                                            <span>$300.00</span>
-                                            <span>Lượt xem 1200</span>
+                                            <span>Giá: {{formatNumber Gia}}</span>
+                                            <span>Lượt xem: {{LuotXem}}</span>
                                         </p>
                                         <p class="descript">
-                                            <span>Sản phẩm được cung cấp bởi Naza và giao hàng bởi ZALORA​ </span>
-                                            <span>- Phong cách Châu Âu đẳng cấp cho bạn</span>
-                                            <span>- Chất liệu: da PU, bề mặt bóng, không thấm nước </span>
-                                            <span>- From dáng túi trống hiện đại, thanh lịch</span>
-                                            <span>- Khóa kéo bằng đồng bền, đẹp </span>
-                                            <span>- Kích thước: dài 28cm, cao 22cm, rộng 11cm</span>
-                                            <p> Loại: Túi sách </p>
-                                            <p> Thương hiệu: Naza</p>
-                                            <p> Xuất xứ: Hong Kong </p>
+                                            <span>{{MoTa}}</span>
+                                            <p value = {{MaLoai}} id="cat"> Loại: {{TenLoai}} </p>
+                                            <p value = {{MaNSX}}> Thương hiệu: {{TenNSX}}</p>
+                                            {{!-- <p> Xuất xứ: Hong Kong </p> --}}
                                             <div class="row row-pb-sm">
                                                 <div class="col-md-4">
                                                     <div class="input-group">
@@ -65,8 +63,10 @@
                                             </div>
                                             <p><a href="/cart" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
                                     </div>
+                                    
                                 </div>
                             </div>
+                            {{/with}}
                         </div>
                     </div>
                 </div>
