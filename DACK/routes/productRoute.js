@@ -33,7 +33,7 @@ productRoute.post('/', (req, res) => {
     });
 });
 productRoute.get('/byCat/:id', function(req, res) {
-    var rec_per_page = 4;
+    var rec_per_page = 12;
     var curPage = req.query.page ? req.query.page : 1;
     var offset = (curPage - 1) * rec_per_page;
 

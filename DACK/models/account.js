@@ -2,17 +2,17 @@ var Q = require('q');
 var db = require('../config/db');
 var mustache = require('mustache');
 
-// exports.loadAll = function() {
+exports.loadUser = function() {
 
-//     var deferred = Q.defer();
+    var deferred = Q.defer();
 
-//     var sql = 'select * from category';
-//     db.load(sql).then(function(rows) {
-//         deferred.resolve(rows);
-//     });
+    var sql = 'select * from user';
+    db.load(sql).then(function(rows) {
+        deferred.resolve(rows);
+    });
 
-//     return deferred.promise;
-// }
+    return deferred.promise;
+}
 
 // exports.add = () => {
 //    `insert into category(MaLoai, TenLoai) values("{{MaLoai}},{{TenLoai}}")`,

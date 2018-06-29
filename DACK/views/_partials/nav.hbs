@@ -15,13 +15,92 @@
                                 </div>
                                 <div class="col-md-4">
                                     <ul>
-                                        <li> <a href="/cart"><i class="icon-shopping-cart"> </i> Giỏ hàng</a></li>
-                                        <li> <a href="#" data-toggle="modal" data-target="#sign-in"><i class="icon-user" ></i>Đăng nhập</a></li>
+                                        {{!-- <li> <a href="/cart"><i class="icon-shopping-cart"> </i> Giỏ hàng</a></li>
+                                       
+                                        <li><a href="/account"> Đăng nhập</a></li> --}}
+                                        {{#if layoutModels.isLogged }}
+                <li><a href="/cart/">Giỏ hàng </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Hi, <b>{{ layoutModels.curUser.TenKH }}</b> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/account/profile">Thông tin cá nhân</a></li>
+                        {{!-- <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li> --}}
+                        <li role="separator" class="divider"></li>
+                        <li><a id="logoutLink" href="javascript:;">Thoát</a></li>
+                    </ul>
+                </li>
+                {{else}}
+                <li> <a href="/cart"><i class="icon-shopping-cart"> </i> Giỏ hàng</a></li>
+                                       
+                                        <li><a href="/account"> Đăng nhập</a></li>
+                {{/if}}
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+    </div>
+</nav>
+{{!-- <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> ĐĂNG NHẬP</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Email</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="email" type="email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-2">Password</label>
+                            <div class="col-md-9">
+                                <input class="form-control" id="password" type="password">
+                                </br>
+                                <span>Nếu bạn chưa có có tài khoản. <a href="/sign-up">Đăng ký</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="sign-in-btn"> Sign in </button>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </div>
+
+    <script type="text/javascript">
+$('#sign-in-btn').on('click', function() {
+
+        var data = {
+            email: $('#email').val(),
+            password: $('#password').val()
+
+
+        };
+        console.log(data);
+
+        $.ajax({
+            url: '/account/login',
+            method: 'POST',
+            // type: 'POST',
+            // contentType:'application/json',
+            data: data,
+            success: function(response) {
+                console.log('success');
+                alert('hhihii');
+                console.log(data);
+
+            },
+            error: function(err) {
+                alert(err);
+            }
+        });
+    });
+    </script> --}}

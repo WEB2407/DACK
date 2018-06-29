@@ -5,10 +5,7 @@ var category = require('../models/category');
 var router = express.Router();
 router.get('/', function(req, res) {
 
-    // res.render('admin/admin', {
-
-
-    //});
+   
     category.loadAll().then(function(data) {
 
         res.render('admin/category', {
@@ -21,10 +18,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', (req, res) => {
-	// var query = {
-
-	// };
-    console.log(req.body);
+	    console.log(req.body);
     category.insert(req.body).then(value => {
         var vm = {
             showAlert: true

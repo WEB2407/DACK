@@ -15,6 +15,9 @@
                 <div class="row">
                     <div class="account-sup" style="padding-right: 250px; padding-left: 250px;padding-top: 50px;">
                         <center>
+                         
+                            <span>Nếu bạn có có tài khoản. <a href="#" data-toggle="modal" data-target="#sign-in"></i>Đăng nhập</a></li></span>
+                        </br> 
                             <h3> ĐĂNG KÝ TÀI KHOẢN</h3></center>
                         <!--   <form method="post" action=""> -->
                         <div class="form-group row">
@@ -48,12 +51,14 @@
                                 </br>
                             </div>
                         </div>
+
                         <div class="form-group row">
                             <label class="control-label col-md-2"></label>
                             <div class="col-md-9">
+                                {{!-- <li> <a href="#" data-toggle="modal" data-target="#sign-in"><i class="icon-user" ></i>Đăng nhập</a></li> --}}
                                 <!-- <div class="g-recaptcha" data-sitekey="6LcKp1UUAAAAABzDr0K8L8bFfrAIxF6DJNNTAObn"></div>  -->
                                 <!-- <button class="btn btn-warning" id="add-btn" style="float: right; background-color: #ffc300;" > Sign up</button> -->
-                                <button type="button" class="btn btn-primary" id="add-btn"> Update </button>
+                                <button type="button" class="btn btn-primary" id="add-btn"> SIGN UP </button>
                             </div>
                         </div>
                         <!--  </form> -->
@@ -163,7 +168,7 @@
                 console.log('success');
                 //alert('hrrrrr');
                 //console.log(data);
-                window.location.href='/admin';
+                window.location.href='/shop/byPro/1';
 
             },
             error: function(err) {

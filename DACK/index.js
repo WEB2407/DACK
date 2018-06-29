@@ -80,6 +80,8 @@ var account = require('./routes/accountRoute');
 var product = require('./routes/productRoute');
 var layoutRoute = require('./routes/_layoutRoute');
 var layoutpr = require('./routes/_layoutpr');
+var home = require('./routes/homeRoute');
+var order = require('./routes/orderRoute');
 
 var producer = require('./routes/producerRoute');
 
@@ -104,7 +106,11 @@ app.use('/category', category);
 app.use('/account', account);
 app.use('/shop', product);
 app.use('/brand', producer);
-app.get('/', function(req, res){
-    res.render('admin/order');
-});
+app.use('/order', order);
+
+app.use('/', home);
+
+// app.get('/search', function(req, res){
+//     res.render('/order');
+// });
 

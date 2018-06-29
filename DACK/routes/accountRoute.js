@@ -6,17 +6,21 @@ var router = express.Router();
 router.get('/', function(req, res) {
 
     res.render('user/sign-up');
+});
+router.get('/profile', function(req, res) {
+
+    //res.render('member/profile');
 
 
     //});
-    // category.loadAll().then(function(data) {
+    account.loadUser().then(function(data) {
 
-    //     res.render('admin/category', {
-    //         category: data,
-    //     });
-    //     console.log(data);
-    //     next();
-    // });
+        res.render('member/profile', {
+            user: data,
+        });
+        console.log(data);
+        next();
+    });
 
 });
 
@@ -44,22 +48,13 @@ router.post('/login', (req, res) => {
     console.log(vm);
     alert('haaaaaa');
     console.log('succsss');
+     req.session.isLogged = true;
+                req.session.user = user;
+
      }).catch(err => {
          res.end('fail');
     });
 });
-// router.get('/delete', (req, res, next) => {
-//     id = req.query.id;
-//     console.log(id);
-//     category.delete(id).then(value => {
-//         var vm = {
-//             showAlert: true
-//         };
-//         res.redirect('/category');
-        
-//     }).catch(err => {
-//          res.end('fail');
-//     });
-// });
+
 
 module.exports = router;

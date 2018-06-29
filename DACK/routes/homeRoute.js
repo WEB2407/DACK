@@ -1,14 +1,18 @@
 var express = require('express');
 var Q = require('q');
-var admin = require('../models/admin');
+var product = require('../models/product');
 
 var router = express.Router();
 router.get('/', function(req, res) {
 
-    admin.loadAll().then(function(data) {
+    // res.render('admin/admin', {
 
-        res.render('admin/admin', {
-            bill: data,
+
+    //});
+    product.loadNew().then(function(data) {
+
+        res.render('user/index', {
+            productnew: data,
         });
         console.log(data);
         next();
