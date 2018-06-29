@@ -29,10 +29,11 @@ router.post('/', (req, res) => {
         var vm = {
             showAlert: true
         };
-        //res.redirect('/category');
+        
         res.json(req.body);
     console.log(vm);
     console.log('succsss');
+    res.redirect('/shop');
      }).catch(err => {
          res.end('fail');
     });

@@ -15,6 +15,23 @@ productRoute.get('/', function(req, res){
     });
 
 });
+productRoute.post('/', (req, res) => {
+    // var query = {
+
+    // };
+    console.log(req.body);
+    product.insert(req.body).then(value => {
+        var vm = {
+            showAlert: true
+        };
+        //res.redirect('/category');
+        res.json(req.body);
+    console.log(vm);
+    console.log('succsss');
+     }).catch(err => {
+         res.end('fail');
+    });
+});
 productRoute.get('/byCat/:id', function(req, res) {
     var rec_per_page = 4;
     var curPage = req.query.page ? req.query.page : 1;

@@ -105,6 +105,6 @@ app.use('/account', account);
 app.use('/shop', product);
 app.use('/brand', producer);
 app.get('/', function(req, res){
-    res.render('admin/product');
+    res.render('admin/order');
 });
 
